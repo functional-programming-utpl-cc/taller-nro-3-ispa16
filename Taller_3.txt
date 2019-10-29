@@ -1,0 +1,22 @@
+//importar el archivo
+import scala.io.Source
+//transformarlo a tuplas
+scala>  val lines = Source.fromFile("C:\\data\\GLigaPro_2019.csv").getLines.drop(1).toList
+ val data = lines.map(
+         line => line.split(";") match {
+            case Array(a, b, c, d, e) => (a.trim, b.trim, c.trim, d.trim.toInt, e.trim)
+        })
+//Orden alfabético el nombre de los jugadores con más de 10 goles.
+val primera = data.filter(_._4 > 10).sorted
+
+//los jugadores con mas de 10 goles ordenados de forma descendente
+val segunda = primera.sortBy(_._4).map(_._1)
+
+//lub pertenece el máximo goleador del campeonato
+val tercera = data.filter(_._4 == data.map(_._4).max ).map(_._2)
+
+//es la nacionalidad del máximo goleador del campeonato?
+val cuarta = data.filter(_._4 == data.map(_._4).max).map(_._3)
+
+// los nombres de los jugadores que han marcado un autogol
+ val quinta = data.filterNot(_._5 =="No").map(_._1)
