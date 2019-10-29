@@ -21,7 +21,7 @@ val numbers = List(10, 11, 12, 18, 20, 50, 60, 80, 81, 96)
 
 ## Taller Nro. 3
 
-Dentro de un archivo CSV(separado por ;) se ha almacenado los datos de los goleadores del campeonato Ecuatoriano de fútbol Liga Pro 2019.
+Dentro de un archivo CSV(separado por ;) que se encuentra en la carpeta [aquí](/data/GLigaPro_2019.csv)(/data/GLigaPro_2019.csv) se ha almacenado los datos de los goleadores del campeonato Ecuatoriano de fútbol Liga Pro 2019.
 
 El archivo posee 5 columnas (la primera fila corresponde a los nombres de las columnas), cada una de ellas se describe así:
 - Jugador: El nombre del jugador
